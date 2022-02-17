@@ -26,8 +26,8 @@ class CalculadoraTest {
 		
 	}
 
-	@Test
-	public void getName() {
+	@Test//TEST VERIFICA NOMBRE FIGURA
+	public void testGetName() {
 		calculum.setId(4);
 		String name = calculum.getNom();
 		String result = "Rectangulo";
@@ -36,5 +36,18 @@ class CalculadoraTest {
 	}
 	
 	@Test
-	public void 
+	public void testGetAreaCuadrado() {
+		int cuadrado = calculum.areacuadrado(6);
+		int result = 36;
+		assertEquals(result, cuadrado);
+	}
+	
+	@Test
+	public void testGetAreaCirculo() {
+		int circulo = (int) calculum.areaCirculo(9);
+		double result = 254.0;
+		assertEquals(result, circulo);
+	}
+	
+	
 }
